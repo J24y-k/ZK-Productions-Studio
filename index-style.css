@@ -42,7 +42,7 @@ body, html {
 /* HERO SECTION */
 .hero {
   height: 100vh;
-  background-image: url('assets/placeholder-bg.jpg'); /* Replace with your image */
+  background-image: url('images/pexels-ann-h-45017-2573957.jpg'); /* Replace with your image */
   background-size: cover;
   background-position: center;
   display: flex;
@@ -179,7 +179,7 @@ body, html {
 }
 
 .expertise {
-  background-color: #1b263b;
+  background-color: #0d1b2a;
   color: #e0e1dd;
   padding: 5rem 5vw;
 }
@@ -214,7 +214,7 @@ body, html {
 }
 
 .expertise-right img {
-  max-width: 100%;
+  max-width: 50%;
   border-radius: 12px;
   transition: transform 0.3s ease;
   cursor: pointer;
@@ -228,7 +228,7 @@ body, html {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
-  background-color: #e63946;
+  background-color: #778da9;
   padding: 2rem;
   border-radius: 12px;
 }
@@ -247,7 +247,7 @@ body, html {
 
 .expertise-card .icon {
   font-size: 2rem;
-  background: #1b263b;
+  background: #0d1b2a;
   width: 45px;
   height: 45px;
   margin: 0 auto 1rem;
@@ -305,7 +305,7 @@ body, html {
 }
 
 .testimonial-card {
-  background-color: #1b263b;
+  background-color: #415a77;
   padding: 1.5rem;
   border-radius: 12px;
   position: relative;
@@ -369,7 +369,7 @@ body, html {
 /* FOOTER */
 /* Footer Styles */
 .footer-section {
-  background-color: #041819;
+  background-color: #0d1b2a;
   color: #e0e1dd;
   padding: 60px 20px;
   font-family: 'Segoe UI', sans-serif;
