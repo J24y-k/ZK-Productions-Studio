@@ -764,13 +764,12 @@ body {
     display: flex;
     gap: 10px;
     justify-content: center;
-    margin-top: 15px; /* Space above social icons */
+    margin-top: 15px; 
 }
 
 .footer-socials img {
     width: 20px; /* Slightly larger for touch targets */
     height: 20px;
-    filter: brightness(0) invert(1); /* Makes them white */
     transition: filter 0.3s;
 }
 
