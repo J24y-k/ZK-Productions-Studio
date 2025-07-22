@@ -1,230 +1,356 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ZK Productions Studio</title>
-  <link rel="stylesheet" href="index-style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800&display=swap" rel="stylesheet" />
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZK Production Studio - Home</title>
+
+    <!-- Essential Meta Tags for SEO and Social Sharing -->
+    <meta name="description" content="ZK Production Studio is a premier sound and music production studio in Johannesburg, South Africa, offering recording, mixing, mastering, live sound, and podcasting services.">
+    <meta name="keywords" content="ZK Production Studio, music production, recording studio Johannesburg, mixing, mastering, audio engineering, live sound, podcasting, content creation, South Africa, sound experiences, zadio gaspard, zk">
+    <meta name="author" content="ZK PRODUCTION STUDIO">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com/index.html"> <!-- IMPORTANT: Change to your actual URL -->
+    <meta property="og:title" content="ZK Productions Studio - Home">
+    <meta property="og:description" content="ZK Production Studio: Amplifying Voices, Defining Moments. Your trusted partner for professional sound and music production in Southern Africa.">
+    <meta property="og:image" content="https://yourdomain.com/images/hero back.PNG"> <!-- IMPORTANT: Provide a good preview image path on your domain -->
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yourdomain.com/index.html"> <!-- IMPORTANT: Change to your actual URL -->
+    <meta property="twitter:title" content="ZK Productions Studio - Home">
+    <meta property="twitter:description" content="ZK Production Studio: Amplifying Voices, Defining Moments. Your trusted partner for professional sound and music production in Southern Africa.">
+    <meta property="twitter:image" content="https://yourdomain.com/images/hero back.PNG"> <!-- IMPORTANT: Provide a good preview image path on your domain -->
+
+    <link rel="stylesheet" href="index-style.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet" />
+
+    <style>
+        /* --- LOADING SCREEN STYLES --- */
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999; 
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 0.5s ease, visibility 3s ease;
+        }
+
+        #loading-screen.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loading-logo-container {
+            position: relative;
+            width: 120px; 
+            height: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .loading-logo {
+            width: 80px; /* Size of the logo inside the spinner */
+            height: auto;
+            border-radius: 50%; 
+            box-shadow: 0 0 15px rgba(191, 161, 77, 0.5); 
+        }
+
+        .loading-spinner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 5px solid rgba(191, 161, 77, 0.2); 
+            border-top: 5px solid #bfa14d; 
+            border-radius: 50%;
+            animation: spin 1.5s linear infinite; 
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /*Text under the spinner */
+        .loading-text {
+            color: #bfa14d;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* Ensure body content is not visible until loading screen is hidden */
+        body.loading {
+            overflow: hidden;
+        }
+    </style>
 </head>
-<body>
+<body class="loading"> 
 
-  <header class="navbar">
-    <div class="logo">
-      <a href="index.html">ZK PRODUCTIONS</a>
-    </div>
-    <nav class="nav-links">
-      <a href="about.html">Meet the Maestro</a>
-    </nav>
-  </header>
-
-  <section class="hero">
-    <div class="hero-text">
-      <h1>The World of <br><span>sound production</span></h1>
-      <a href="#about" class="cta-button">Find out more</a>
-    </div>
-  </section>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <script src="main.js"></script>
-
-  <section class="about" id="about">
-  <div class="about-left">
-    <h2><span class="highlight-dot">▪</span> ABOUT US</h2>
-    <p>
-      ZK Productions brings professional sound engineering to your events, concerts, weddings, and more.
-      We empower musicians and elevate experiences with premium audio systems and music production support.
-      Whether you're hosting a small gathering or a stadium performance, our team ensures clarity, precision,
-      and immersive sound that transforms every moment into something unforgettable.
-    </p>
-  </div>
-
-  <div class="about-gallery">
-    <img src="images/IMG_0094.PNG" alt="Image 1" class="about-img">
-    <img src="images/IMG_0095.PNG" alt="Image 2" class="about-img">
-    <img src="images/IMG_0096.PNG" alt="Image 3" class="about-img">
-    <img src="images/IMG_0097.PNG" alt="Image 4" class="about-img">
-    <img src="images/IMG_0098.PNG" alt="Image 5" class="about-img">
-    <img src="images/setup.PNG" alt="Image 6" class="about-img">
-  </div>
-</section>
-
-<section class="expertise" id="expertise">
-  <div class="expertise-top">
-    <div class="expertise-left">
-      <h2>OUR <br><span>EXPERTISE</span></h2>
-      <div class="icon-bar">
-        <!-- Red Progress-Like Icon -->
-        <svg width="80" height="20" viewBox="0 0 100 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="20" height="8" fill="#e63946" />
-          <rect x="25" width="20" height="8" fill="#e63946" />
-          <rect x="50" width="20" height="8" fill="#e63946" />
-          <rect x="75" width="20" height="8" fill="#415a77" />
-        </svg>
-      </div>
-    </div>
-    <div class="expertise-right">
-      <img src="images/IMG_0098.PNG" alt="Expertise Showcase" />
-    </div>
-  </div>
-
-  <div class="expertise-grid">
-    <div class="expertise-card">
-      <div class="icon">&#8595;</div>
-      <h4>Live Sound for Concerts</h4>
-      <p>Premium sound systems and professional mixing for large venues and intimate shows.</p>
+    <!-- --- LOADING SCREEN --- -->
+    <div id="loading-screen">
+        <div class="loading-logo-container">
+            <img src="images/zk'slogo.jpeg" alt="ZK Logo" class="loading-logo" />
+            <div class="loading-spinner"></div>
+        </div>
+        <div class="loading-text">Loading ZK Productions Studio...</div>
     </div>
 
-    <div class="expertise-card">
-      <div class="icon">&#8595;</div>
-      <h4>Event & Wedding Audio</h4>
-      <p>Tailored sound engineering to elevate ceremonies, receptions, and private events.</p>
-    </div>
+    <header class="hero-section">
+        <div class="hero-left">
+            <div class="logo-container">
+                <img src="images/zk'slogo.jpeg" alt="ZK Logo" class="logo" />
+            </div>
 
-    <div class="expertise-card">
-      <div class="icon">&#8595;</div>
-      <h4>Music Production & Mixing</h4>
-      <p>Studio-grade production services, mixing, and mastering for artists and creators.</p>
-    </div>
+            <div class="hero-text">
+                <div class="hero-heading">
+                    <h1>ZK Productions</h1>
+                    <h2>STUDIO</h2>
+                </div>
+                <hr class="divider" />
+                <a href="maestro.html" class="hero-btn">MEET THE MAESTRO</a>
+            </div>
 
-    <div class="expertise-card">
-      <div class="icon">&#8595;</div>
-      <h4>Church Sound Solutions</h4>
-      <p>Clear and immersive sound systems for houses of worship and spiritual events.</p>
-    </div>
-  </div>
-</section>
+            <div class="scroll-text"></div>
+        </div>
 
-<section class="testimonials" id="testimonials">
-  <h2 class="testimonial-title">What Our Clients Have To Say</h2>
+        <div class="hero-right">
+            <div class="hero-image">
+                <div class="hero-image-overlay"></div>
+                <img src="images/IMG_0097.PNG" alt="Hero Image of Studio Equipment" />
+            </div>
+        </div>
 
-  <div class="testimonial-grid">
-    <!-- Repeat this block 12 times -->
-    <div class="testimonial-card">
-      <div class="quote-icon">“</div>
-      <p class="testimonial-text">Best studio, they are punctual with time, and their services are very affordable and professional,
-         when i booked my studio session, they are very reliable. 
-         ...all thanks to ZK studios.🔥🔥🔥.</p>
-      <div class="stars">★★★★★</div>
-      <div class="client-name">– Young Gospel Musician Band.</div>
-    </div>
+        <button class="menu-toggle" id="menu-toggle">
+            ☰
+        </button>
 
-    <div class="testimonial-card">
-      <div class="quote-icon">“</div>
-      <p class="testimonial-text"> Their professionalism, attention to detail, and passion for what they do were evident in every 
-        part of the setup — the sound to the stage and overall coordination. 
-        The team was organized, creative, and made the entire experience stress-free.
-      </p>
-      <div class="stars">★★★★★</div>
-      <div class="client-name">– Henoc Mukendi</div>
-    </div>
+        <nav class="main-nav" id="main-nav">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="service.html">WHAT WE DO</a></li>
+                <li><a href="maestro.html">THE MAESTRO</a></li>
+                <li><a href="contact.html">CONTACT US</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div class="testimonial-card">
-      <div class="quote-icon">“</div>
-      <p class="testimonial-text">This production is too zambulicious 🔥🔥🔥🔥</p>
-      <div class="stars">★★★★★</div>
-      <div class="client-name">– Samuel Kabongo.</div>
-    </div>
+    <section class="stats-section" id="stats">
+        <div class="stats-container">
+            <div class="stat-item">
+                <div class="stat-number" data-target="150">0</div> 
+                <div class="stat-label">Concerts</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="90">0</div> 
+                <div class="stat-label">Live Streams</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="120">0</div> 
+                <div class="stat-label">Podcasts</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="300">0</div> 
+                <div class="stat-label">Post-productions</div>
+            </div>
+        </div>
+    </section>
 
-    <div class="testimonial-card">
-      <div class="quote-icon">“</div>
-      <p class="testimonial-text">The best in town when it comes availability, time keeping, sound checking,
-         very good range of musical instruments👌🏾👍🏾🔥</p>
-      <div class="stars">★★★★★</div>
-      <div class="client-name">– Joseph Lukoji Ngoyi</div>
-    </div>
+    <section class="video-section">
+        <div class="video-wrapper">
+            <video width="100%" controls="controls" autoplay muted loop>
+                <source src="images/IMG_0190.MOV" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
 
-    <div class="testimonial-card">
-      <div class="quote-icon">“</div>
-      <p class="testimonial-text">a very good engineer, he respects the customers and 
-        their work if you need good quality work and professionalism,
-         contact him, you will not be disappointed @zk production</p>
-      <div class="stars">★★★★☆</div>
-      <div class="client-name">– Gracien kbg Accoustique</div>
-    </div>
+    <section class="mission-section">
+        <div class="container">
+            <h2 class="mission-title">AMPLIFYING VOICES. DEFINING MOMENTS.</h2>
+            <div class="mission-content">
+                <p class="mission-lead">
+                    ZK Production is a premier sound and music production studio empowering events, artists, and content creators.
+                </p>
+                <p class="mission-description">
+                    Our mission is to provide technically advanced sound engineering and creative direction that transforms ordinary moments into immersive experiences.
+                    With expert audio engineers and a deep understanding of acoustics, we deliver tailored solutions for concerts, churches, weddings, and post-production. We also support musicians and upcoming artists with access to our high-end recording suites and mixing services.
+                </p>
+                <div class="mission-cta">
+                    <span class="underline"></span>
+                    <a href="service.html" class="cta-button">SEE WHAT WE DO</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="testimonial-card">
-      <div class="quote-icon">“</div>
-      <p class="testimonial-text">ZK Production is a saviour in pur industry please even 100star for them</p>
-      <div class="stars">★★★★★</div>
-      <div class="client-name">– Aline Wayama</div>
-    </div>
+    <section class="services-section" id="services">
+        <div class="angled-section">
+            <div class="grid-container">
+                <div class="tile" style="background-image: url('images/IMG_0098.PNG')">
+                    <div class="text-block">
+                        <h2>MUSIC<br />PRODUCTION</h2>
+                        <p>We produce original, high-quality soundtracks tailored for artists and events.</p>
+                        <a href="service.html">Find out more</a>
+                    </div>
+                </div>
+                <div class="tile" style="background-image: url('images/hero back.PNG')">
+                    <div class="text-block">
+                        <h2>MIXING &<br />MASTERING</h2>
+                        <p>Industry-standard mixing and mastering for clarity and punch.</p>
+                        <a href="service.html">Find out more</a>
+                    </div>
+                </div>
+                <div class="tile" style="background-image: url('images/IMG_0095.PNG')">
+                    <div class="text-block">
+                        <h2>LIVE SESSIONS &<br />REHEARSALS</h2>
+                        <p>Book our studio for live performances or practice sessions.</p>
+                        <a href="service.html">Find out more</a>
+                    </div>
+                </div>
+                <div class="tile" style="background-image: url('images/IMG_0094.PNG')">
+                    <div class="text-block">
+                        <h2>PODCASTING</h2>
+                        <p>Record and produce your podcast with high-end audio equipment.</p>
+                        <a href="service.html">Find out more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="testimonial-card">
-      <div class="quote-icon">“</div>
-      <p class="testimonial-text">Zk is a good person</p>
-      <div class="stars">★★★★★</div>
-      <div class="client-name">– Jean-pierre grace mutombo.</div>
-    </div>
+    <section class="testimonials-section">
+        <h2 class="section-title">WHAT OUR CLIENTS SAY</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <p>"ZK Production is a saviour in ur industry, please even 100star for them"</p>
+                <span>– ALINE WAYAMA.</span>
+            </div>
+            <div class="testimonial-card">
+                <p>"Best studio, they are punctual with time,
+                    and their services are very affordable and professional, when i booked my studio session, they are very reliable.
+                    ...all thanks to ZK studios.🔥🔥🔥"</p>
+                <span>– YOUNG GOSPEL MUSICIANS BAND</span>
+            </div>
+            <div class="testimonial-card">
+                <p>"The best in town when it comes availability, time keeping, sound checking, very good range of musical instruments👌🏾👍🏾🔥"</p>
+                <span>– JOSEPPH LUKOJI NGOYI</span>
+            </div>
+            <div class="testimonial-card">
+                <p>"This production is just too zambulicious"</p>
+                <span>– SAMUEL KABONGO</span>
+            </div>
+            <div class="testimonial-card">
+                <p>"They didn’t just provide a service; they created a memorable atmosphere that left everyone impressed.
+                    If you’re looking for excellence and reliability, ZK Productions is the team to trust. I’m truly grateful for their work."</p>
+                <span>– HENOC MUKENDI</span>
+            </div>
+            <div class="testimonial-card">
+                <p>"a very good engineer, he respects the customers and their work if you need good quality work and
+                    professionalism, contact him, you will not be disappointed @zk production"</p>
+                <span>– GRACIEN KGB ACCOUSTIQUE</span>
+            </div>
+            <div class="testimonial-card">
+                <p>"Amazing service, had a great experience"</p>
+                <span>– Marie Kasongo</span>
+            </div>
+            <div class="testimonial-card">
+                <p>"One of the best studios in johannesburg. Zk always number one"</p>
+                <span>– Gael Matala</span>
+            </div>
+            <div class="testimonial-card">
+                <p>"Best sound system"</p>
+                <span>– Nsenga Hurcil</span>
+            </div>
+        </div>
+    </section>
 
-    <div class="testimonial-card">
-      <div class="quote-icon">“</div>
-      <p class="testimonial-text">One of the best studio in Johannesburg
-        Zk always number one in sound production
-      </p>
-      <div class="stars">★★★★☆</div>
-      <div class="client-name">– Gael Matala</div>
-    </div>
+    <section class="section-intro">
+        <div class="intro-container">
+            <h2>ZK PRODUCTION POWERS<br>SOUND EXPERIENCES</h2>
+            <p>
+                For over a decade, ZK Production has been at the top of sound engineering and audio production for live events, media,
+                and performance in Southern Africa. Our story is one of passion for clarity, dedication to technical precision, and an unwavering
+                commitment to empowering artists, communities, and audiences through sound.</p>
+            <p>
+                Over the years, our offerings have expanded to meet the dynamic needs of the entertainment industry. Today,
+                ZK Production delivers professional sound system rental, live sound engineering, music direction, studio recording,
+                mixing and mastering, event production, and audio post-production, serving concerts, churches, weddings, and
+                creative projects of all kinds.</p>
+            <div class="intro-button-group">
+                <span class="intro-line"></span>
+                <a href="contact.html" class="intro-button">CONTACT US</a>
+            </div>
+        </div>
+    </section>
 
-    <div class="testimonial-card">
-      <div class="quote-icon">“</div>
-      <p class="testimonial-text"> They didn’t just provide a service; they created a memorable atmosphere that left everyone impressed.
-         If you’re looking for excellence and reliability, ZK Productions is the team to trust.
-          I’m truly grateful for their work.</p>
-      <div class="stars">★★★★★</div>
-      <div class="client-name">– Henoc Mukendi</div>
-    </div>
+    <section class="footer-upper">
+        <div class="footer-upper-container">
+            <div class="footer-upper-map">
+                <img src="images/map.jpeg" alt="Urban Brew Studios Map">
+            </div>
+            <div class="footer-upper-info">
+                <div class="footer-upper-block">
+                    <h5>CALL US</h5>
+                    <p>+27 73 188 4305</p>
+                </div>
+                <div class="footer-upper-block">
+                    <h5>MESSAGE US</h5>
+                    <p>gaspardzk7@gmail.com</p>
+                </div>
+                <div class="footer-upper-block">
+                    <h5>FIND US</h5>
+                    <p>
+                        95<br>
+                        FRERE RD,<br>
+                        JUDITH'S PAARL,<br>
+                        BERTRAMS, JOHANNESBURG,<br>
+                        2094
+                    </p>
+                </div>
+            </div>
 
-    <div class="testimonial-card">
-      <div class="quote-icon">“</div>
-      <p class="testimonial-text">One of the best music studios and sound prodution vompanies in the world</p>
-      <div class="stars">★★★★★</div>
-      <div class="client-name">– Miracle Benzi Mansita</div>
-    </div>
+            <hr class="footer-line">
 
-    <div class="testimonial-card">
-      <div class="quote-icon">“</div>
-      <p class="testimonial-text">Best sound system</p>
-      <div class="stars">★★★★☆</div>
-      <div class="client-name">– Nsenga Hurcil</div>
-    </div>
+            <div class="footer-nav">
+                <a href="index.html">HOME</a>
+                <a href="#">ABOUT US</a>
+                <a href="service.html">WHAT WE DO</a>
+                <a href="#">OUR TEAM</a>
+                <a href="#">CAREERS</a>
+                <a href="contact.html">CONTACT US</a>
+            </div>
 
-    <div class="testimonial-card">
-      <div class="quote-icon">“</div>
-      <p class="testimonial-text">Highly recomend 👌🏾, high quality 👌🏾</p>
-      <div class="stars">★★★★★</div>
-      <div class="client-name">– Evangelist Bernard Bezimbert</div>
-    </div>
-  </div>
-</section>
+            <div class="footer-bottom">
+                <p>© 2012, ZK PRODUCTION STUDIO - All Rights Reserved | BUILT BY JAY_K
+                </p>
+                <div class="footer-socials">
+                    <a href="#"><img src="facebook-icon.svg" alt="Facebook icon"></a>
+                    <a href="#"><img src="twitter-icon.svg" alt="Twitter icon"></a>
+                    <a href="#"><img src="linkedin-icon.svg" alt="LinkedIn icon"></a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- Footer Section -->
-<footer id="contact" class="footer-section">
-  <div class="footer-container">
-    <div class="footer-left">
-      <h2 class="footer-title">Get in touch.</h2>
-      <p class="footer-description">
-        Whether you have questions about our services, need support, or want to share your feedback, our dedicated team is here to assist you every step of the way.
-      </p>
-      <ul class="footer-contact-info">
-        <li><i class="fas fa-envelope"></i> gaspardzk7@gmail.com</li>
-        <li><i class="fas fa-phone"></i> +27 73 188 4305</li>
-        <li><i class="fas fa-globe"></i> whenithedomain.com</li>
-        <li><i class="fas fa-map-marker-alt"></i> 95 Frere Road Judith Paal Bertrams</li>
-      </ul>
-    </div>
-
-    <form class="footer-form" id="contactForm">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Email Address" required />
-      <input type="tel" name="phone" placeholder="Phone Number" />
-      <textarea name="message" placeholder="How can we be of service?" required></textarea>
-      <button type="submit">SUBMIT</button>
-    </form>
-  </div>
-</footer>
-
+    <script src="main.js"></script>
 </body>
 </html>

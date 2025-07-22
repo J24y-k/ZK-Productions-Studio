@@ -1,0 +1,205 @@
+/* GENERAL */
+body {
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+    background-color: #111;
+    color: #f2f2f2;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* --- SERVICES NAVIGATION --- */
+.services-nav {
+    background-color: #1a1a1a;
+    padding: 1rem 2rem; /* Retained original padding */
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-bottom: 2px solid #bfa14d;
+}
+
+.services-nav ul {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap for smaller screens */
+    justify-content: center;
+    gap: 2rem; /* Spacing between nav items */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.services-nav a {
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+    white-space: nowrap; /* Prevent nav links from breaking onto multiple lines */
+}
+
+.services-nav a:hover {
+    border: 1px solid #bfa14d;
+    background-color: #222;
+    border-radius: 4px;
+    color: #bfa14d;
+}
+
+/* --- INTRO TEXT --- */
+.services-intro {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 2rem; /* Retained original padding for larger screens */
+    text-align: center;
+    color: #ccc;
+}
+
+/* --- SERVICES SECTION --- */
+.service {
+    display: flex;
+    flex-wrap: wrap; /* Allows image and text to wrap for smaller screens */
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 2rem; /* Retained original padding for larger screens */
+    gap: 2rem; /* Spacing between image and text */
+    border-bottom: 1px solid #333;
+}
+
+.service:nth-child(even) {
+    flex-direction: row-reverse; /* Reverses order for even sections on desktop */
+}
+
+.service img {
+    width: 100%; /* Image fills its container */
+    max-width: 500px; /* Limit image width on larger screens */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+    display: block; /* Remove extra space below image */
+}
+
+.service-text {
+    max-width: 600px; /* Limit text block width on larger screens */
+    flex-grow: 1; /* Allow text to grow and take available space */
+}
+
+.service-text h2 {
+    font-size: 2rem; /* Retained original font size for larger screens */
+    margin-bottom: 1rem;
+    color: #bfa14d;
+}
+
+.service-text p {
+    font-size: 1rem; /* Retained original font size */
+    color: #bbb;
+}
+
+/* --- FOOTER --- */
+/* This footer section is consistent with the one from the previous CSS block */
+.footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    border-top: 1px solid #bfa14d;
+    font-size: 0.9rem;
+    color: #bfa14d;
+    background-color: #0d0d0d;
+}
+
+/* --- RESPONSIVENESS --- */
+
+/* For screens smaller than 992px (e.g., larger tablets, small laptops) */
+@media (max-width: 992px) {
+    .services-nav {
+        padding: 0.8rem 1rem; /* Slightly reduce padding */
+    }
+
+    .services-nav ul {
+        gap: 1.5rem; /* Reduce gap between nav items */
+    }
+
+    .services-intro {
+        margin: 1.5rem auto; /* Reduce top/bottom margin */
+        padding: 0 1.5rem; /* Adjust horizontal padding */
+    }
+
+    .service {
+        padding: 2.5rem 1.5rem; /* Reduce section padding */
+        gap: 1.5rem; /* Reduce gap between image and text */
+    }
+}
+
+/* For screens smaller than 768px (e.g., most tablets, large phones) */
+@media (max-width: 768px) {
+    .services-nav ul {
+        flex-direction: column; /* Stack nav items vertically */
+        gap: 0.5rem; /* Minimal gap for stacked links */
+        align-items: center; /* Center stacked links */
+    }
+
+    .services-nav a {
+        padding: 0.4rem 0.8rem; /* Smaller padding for nav links */
+        font-size: 0.9rem; /* Slightly smaller font for nav links */
+        width: fit-content; /* Allow button to size naturally */
+    }
+
+    .services-intro {
+        padding: 0 1rem; /* Further reduce intro padding */
+        font-size: 0.9rem; /* Smaller intro text */
+    }
+
+    .service {
+        flex-direction: column !important; /* Force stacking of image and text for all services */
+        text-align: center; /* Center text when stacked */
+        padding: 2rem 1rem; /* Further reduce section padding */
+        gap: 1.5rem; /* Maintain consistent gap */
+    }
+
+    .service img {
+        max-width: 80%; /* Limit image size relative to viewport for better mobile fit */
+    }
+
+    .service-text h2 {
+        font-size: 1.8rem; /* Scale down heading 2 */
+        margin-bottom: 0.8rem; /* Adjust margin */
+    }
+
+    .service-text p {
+        font-size: 0.95rem; /* Slightly smaller body text */
+    }
+}
+
+/* For screens smaller than 480px (e.g., smaller mobile phones) */
+@media (max-width: 480px) {
+    .services-nav {
+        padding: 0.6rem 0.5rem; /* Even smaller nav padding */
+    }
+
+    .services-nav a {
+        font-size: 0.85rem; /* Even smaller nav font */
+    }
+
+    .services-intro {
+        margin: 1rem auto; /* More reduced top/bottom margin */
+        padding: 0 0.8rem; /* Minimal horizontal padding */
+        font-size: 0.85rem; /* Even smaller intro text */
+    }
+
+    .service {
+        padding: 1.5rem 0.8rem; /* Minimal section padding */
+        gap: 1rem; /* Reduce gap between image and text */
+    }
+
+    .service img {
+        max-width: 90%; /* Allow image to be a bit wider on very small screens */
+    }
+
+    .service-text h2 {
+        font-size: 1.6rem; /* Final scale down for heading 2 */
+    }
+
+    .service-text p {
+        font-size: 0.9rem; /* Final scale down for body text */
+    }
+}

@@ -1,0 +1,139 @@
+/* GENERAL */
+body {
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+    background-color: #111;
+    color: #f2f2f2;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* --- MAESTRO SECTION --- */
+.maestro-section {
+    padding: 4rem 2rem; /* Retained original padding for larger screens */
+    background-color: #0d0d0d;
+    border-top: 2px solid #bfa14d;
+}
+
+.maestro-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap onto the next line */
+    align-items: center; /* Vertically centers items when space allows */
+    justify-content: center; /* Horizontally centers items */
+    gap: 3rem; /* Space between flex items */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.maestro-image {
+    flex-shrink: 0; /* Prevent image from shrinking unnecessarily */
+    display: flex; /* Use flex to center the image if its max-width is smaller than parent */
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Default to full width for stacking */
+    max-width: 400px; /* Limit image width on larger screens */
+}
+
+.maestro-image img {
+    width: 100%; /* Image will fill its container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.1);
+    display: block; /* Remove extra space below image */
+}
+
+.maestro-text {
+    max-width: 600px; /* Limit text block width on larger screens */
+    flex-grow: 1; /* Allow text to grow and take available space */
+}
+
+.maestro-text h2 {
+    color: #bfa14d;
+    font-size: 2.5rem; /* Retained original font size for larger screens */
+    margin-bottom: 0.5rem;
+}
+
+.maestro-text h3 {
+    color: #fff;
+    font-size: 1.5rem; /* Retained original font size for larger screens */
+    margin-bottom: 1.5rem;
+}
+
+.maestro-text p {
+    color: #ccc;
+    font-size: 1rem; /* Retained original font size */
+    line-height: 1.7;
+    margin-bottom: 1.2rem;
+}
+
+/* --- FOOTER --- */
+/* This footer section is consistent with the one from the previous CSS block */
+.footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    border-top: 1px solid #bfa14d;
+    font-size: 0.9rem;
+    color: #bfa14d;
+    background-color: #0d0d0d;
+}
+
+/* --- RESPONSIVENESS --- */
+
+/* For screens smaller than 768px (e.g., Tablets, larger mobile phones) */
+@media (max-width: 768px) {
+    .maestro-container {
+        flex-direction: column; /* Stack image and text vertically */
+        text-align: center; /* Center text for stacked layout */
+        gap: 2rem; /* Slightly reduce gap when stacked */
+    }
+
+    .maestro-section {
+        padding: 3rem 1.5rem; /* Reduce section padding */
+    }
+
+    .maestro-image {
+        max-width: 300px; /* Limit image width to prevent it from being too big on tablets */
+    }
+
+    .maestro-text {
+        padding: 0 1rem; /* Adjust horizontal padding for text block */
+    }
+
+    .maestro-text h2 {
+        font-size: 2rem; /* Scale down heading 2 */
+    }
+
+    .maestro-text h3 {
+        font-size: 1.3rem; /* Scale down heading 3 */
+    }
+}
+
+/* For screens smaller than 480px (e.g., smaller mobile phones) */
+@media (max-width: 480px) {
+    .maestro-section {
+        padding: 2.5rem 1rem; /* Further reduce section padding */
+    }
+
+    .maestro-image {
+        max-width: 250px; /* Further limit image size for small phones */
+    }
+
+    .maestro-text {
+        padding: 0 0.5rem; /* Reduce horizontal padding for text block */
+    }
+
+    .maestro-text h2 {
+        font-size: 1.8rem; /* Final scale down for heading 2 */
+    }
+
+    .maestro-text h3 {
+        font-size: 1.1rem; /* Final scale down for heading 3 */
+    }
+
+    .maestro-text p {
+        font-size: 0.9rem; /* Slightly smaller body text */
+    }
+}
